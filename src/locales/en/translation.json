@@ -1,0 +1,58 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+
+  "hero": {
+    "title": "Build The <1>Future</1>",
+    "subtitle": "Hi 👋 This is Abdelemjid. I am a software developer. With this portfolio, I'm sharing my passion for web development"
+  },
+
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get more about me",
+    "personal_info": "Personal Info",
+    "first_name": "First Name:",
+    "nationality": "Nationality:",
+    "freelance": "Freelance:",
+    "graduated": "Graduated From:",
+    "specialization": "Specialization:",
+    "whatsapp": "WhatsApp:",
+    "languages": "Languages:",
+    "contact_me": "Contact me on WhatsApp",
+    "achievement": "My Achievement",
+    "experience": "Years of Experience",
+    "project_completed": "Project Completed",
+    "customers": "Happy customers",
+    "awards": "Awards Won"
+  },
+
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "Tools, Technologies, and Frameworks I am using",
+    "beginner": "Beginner",
+    "elementary": "Elementary",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced",
+    "expert": "Expert",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Database",
+    "devops": "DevOps",
+    "other_skills": "Other Skills"
+  },
+
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A Showcase of My Projects and Creative Work",
+    "project_image": "Project Image",
+    "tags": "Technologies",
+    "view": "View Project",
+    "alive": "Alive",
+    "lifeless": "Lifeless"
+  }
+}
