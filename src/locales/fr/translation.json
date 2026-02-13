@@ -1,3 +1,86 @@
 {
-  "welcome": "Bonjour"
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Construire Le <1>Futur</1>",
+    "subtitle": "Salut 👋 Je suis Abdelemjid. Je suis développeur logiciel. Avec ce portfolio, je partage ma passion pour le développement web"
+  },
+  "about": {
+    "title": "À Propos de Moi",
+    "subtitle": "En savoir plus sur moi",
+    "personal_info": "Informations Personnelles",
+    "name": "Nom :",
+    "nationality": "Nationalité :",
+    "moroccan": "Marocain",
+    "available": "Disponible",
+    "freelance": "Freelance :",
+    "graduated": "Diplômé de :",
+    "specialization": "Spécialisation :",
+    "whatsapp": "WhatsApp :",
+    "languages": "Langues :",
+    "langs": "Arabe, Anglais",
+    "contact_me": "Contactez-moi sur WhatsApp",
+    "achievement": "Mes Réalisations",
+    "experience": "Années d'Expérience",
+    "project_completed": "Projets Réalisés",
+    "customers": "Clients Satisfaits",
+    "awards": "Prix Remportés"
+  },
+  "skills": {
+    "title": "Mes Compétences",
+    "subtitle": "Outils, Technologies et Frameworks que j'utilise",
+    "beginner": "Débutant",
+    "elementary": "Élémentaire",
+    "intermediate": "Intermédiaire",
+    "advanced": "Avancé",
+    "expert": "Expert",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "database": "Base de Données",
+    "devops": "DevOps",
+    "other_skills": "Autres Compétences"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Une Vitrine de Mes Projets et Travaux Créatifs",
+    "project_image": "Image du Projet",
+    "tags": "Technologies",
+    "view": "Voir le Projet",
+    "alive": "En ligne",
+    "lifeless": "Hors ligne"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez besoin de créer votre propre site web, ou vous souhaitez mettre à jour votre site (MERN Stack) en ajoutant des fonctionnalités ? N'hésitez pas à me contacter.",
+    "fullname": "Nom Complet *",
+    "email": "Email *",
+    "message": "Message *",
+    "send": "Envoyer",
+    "fullname_placeholder": "Jean Dupont",
+    "email_placeholder": "jean.dupont@gmail.com",
+    "message_placeholder": "Parlez-moi de votre projet, idée...",
+    "sending": "Envoi en cours...",
+    "me": "C'est Moi !",
+    "send_me": "Envoyez-moi un Message Direct",
+    "social": "Réseaux Sociaux"
+  },
+  "footer": {
+    "about": "Développeur full-stack spécialisé dans le MERN stack, je crée des applications web modernes. Diplômé d'ALX, dédié à transformer les idées en projets web réels.",
+    "available": "Disponible pour Travailler",
+    "time": "Disponible 24h/24 et 7j/7",
+    "fiverr": "Engagez-moi sur Fiverr",
+    "front": "Front End",
+    "back": "Back End",
+    "api": "Intégration API",
+    "services": "Services",
+    "quick": "Liens Rapides",
+    "all_rights": "Tous Droits Réservés",
+    "built": "Créé avec ❤️ Par Moi",
+    "created": "Créé Avec"
+  }
 }

@@ -37,10 +37,15 @@
 
 @layer base {
   .container {
-    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (width < theme(--breakpoint-sm)) {
+      max-width: 92%;
+    }
 
     @media (width >= theme(--breakpoint-sm)) {
-      max-width: 600px;
+      max-width: 580px;
     }
 
     @media (width >= theme(--breakpoint-md)) {
@@ -58,5 +63,28 @@
     @media (width >= theme(--breakpoint-2xl)) {
       max-width: 1320px;
     }
+  }
+
+  /* Scroll Bar Style */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-indigo-500) transparent;
+  }
+
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--color-indigo-500);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 9999px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: transparent;
   }
 }

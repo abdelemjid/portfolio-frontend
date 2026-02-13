@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { RxHamburgerMenu } from "react-icons/rx";
 import MobileLinks from "./MobileLinks";
 import { AnimatePresence, motion } from "motion/react";
+import LangSelector from "./LangSelector";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -33,47 +34,51 @@ const Navbar = () => {
                 href="/"
                 className="hover:text-indigo-500 transition-all duration-200"
               >
-                A.E
+                Es. Abdelemjid
               </a>
             </p>
           </div>
-          {/* Laptop */}
-          <div className="hidden md:flex w-fit justify-center items-center flex-row gap-3 text-sm">
-            <a
-              href="#"
-              className=" hover:text-indigo-500 transition-all duration-200"
-            >
-              {t("navbar.home")}
-            </a>
-            <a
-              href="#about"
-              className=" hover:text-indigo-500 transition-all duration-200"
-            >
-              {t("navbar.about")}
-            </a>
-            <a
-              href="#skills"
-              className=" hover:text-indigo-500 transition-all duration-200"
-            >
-              {t("navbar.skills")}
-            </a>
-            <a
-              href="#projects"
-              className=" hover:text-indigo-500 transition-all duration-200"
-            >
-              {t("navbar.projects")}
-            </a>
-            <a
-              href="#contact"
-              className=" hover:text-indigo-500 transition-all duration-200"
-            >
-              {t("navbar.contact")}
-            </a>
+          <div className="flex flex-row gap-3">
+            {/* Language Selector */}
+            <LangSelector />
+            {/* Laptop */}
+            <div className="hidden md:flex w-fit justify-center items-center flex-row gap-3 text-sm">
+              <a
+                href="#"
+                className=" hover:text-indigo-500 transition-all duration-200"
+              >
+                {t("navbar.home")}
+              </a>
+              <a
+                href="#about"
+                className=" hover:text-indigo-500 transition-all duration-200"
+              >
+                {t("navbar.about")}
+              </a>
+              <a
+                href="#skills"
+                className=" hover:text-indigo-500 transition-all duration-200"
+              >
+                {t("navbar.skills")}
+              </a>
+              <a
+                href="#projects"
+                className=" hover:text-indigo-500 transition-all duration-200"
+              >
+                {t("navbar.projects")}
+              </a>
+              <a
+                href="#contact"
+                className=" hover:text-indigo-500 transition-all duration-200"
+              >
+                {t("navbar.contact")}
+              </a>
+            </div>
           </div>
           {/* Burger Icon */}
           <button
             onClick={() => setToggledMenu(true)}
-            className="md:hidden cursor-pointer hover:text-indigo-500 transition-all ease-in-out duration-200"
+            className="md:hidden cursor-pointer p-2 rounded-md bg-neutral-100/10 border border-neutral-100/20 hover:text-indigo-500 transition-all ease-in-out duration-200"
           >
             <RxHamburgerMenu />
           </button>

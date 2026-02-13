@@ -6,7 +6,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-linear-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="relative h-screen w-full overflow-hidden bg-linear-to-br from-slate-900 via-blue-950 to-slate-900">
       {/* Background Effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute left-1/4 top-1/4 h-64 w-64 rounded-full bg-purple-500/30 blur-3xl" />
@@ -15,7 +15,7 @@ const Hero = () => {
 
       {/* 3D Canvas */}
       <div className="absolute inset-0 z-10 md:right-[30%] md:top-[50%] md:translate-x-[50%] md:-translate-y-[50%] overflow-visible h-full">
-        {/* <Scene3D /> */}
+        <Scene3D />
       </div>
 
       {/* Content Overlay */}
@@ -68,7 +68,9 @@ const Hero = () => {
         className="absolute bottom-8 left-1/2 z-30 -translate-x-1/2"
       >
         <div className="flex flex-col items-center">
-          <span className="mb-2 text-sm text-gray-400">Scroll Down</span>
+          <span className="mb-2 text-sm text-gray-400">
+            {t("hero.scroll_down")}
+          </span>
           <div className="h-6 w-4 rounded-full border-2 border-gray-400 p-1">
             <div className="h-1.5 w-1 animate-bounce rounded-full bg-gray-400" />
           </div>

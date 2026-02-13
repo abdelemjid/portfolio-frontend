@@ -7,6 +7,8 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import enTranslation from "../locales/en/translation.json";
 import arTranslation from "../locales/ar/translation.json";
 import frTranslation from "../locales/fr/translation.json";
+import esTranslation from "../locales/es/translation.json";
+import type { LanguageCode } from "../types/Language";
 
 const resources = {
   en: {
@@ -17,6 +19,9 @@ const resources = {
   },
   fr: {
     translation: frTranslation,
+  },
+  es: {
+    translation: esTranslation,
   },
 };
 
@@ -39,5 +44,15 @@ i18n
       caches: ["localStorage"],
     },
   });
+
+const updateDirection = (lang: LanguageCode) => {
+  const dir = lang === "ar" ? "rtl" : "ltr";
+  document.documentElement.dir = dir;
+  document.documentElement.lang = lang;
+};
+
+i18n.on("languageChanged", (lng) => {
+  updateDirection(lng as LanguageCode);
+});
 
 export default i18n;

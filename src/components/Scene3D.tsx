@@ -37,9 +37,9 @@ const Scene3D = () => {
         >
           {/* Your GLB Model */}
           <SpinningModel
-            modelPath="/models/setup.glb"
+            modelPath="/models/setup_optimized.glb"
             rotationSpeed={0.002}
-            scale={0.05}
+            scale={0.06}
             position={[0, 0, 0]}
           />
         </Float>

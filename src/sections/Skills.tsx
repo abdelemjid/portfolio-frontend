@@ -32,12 +32,12 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative w-full min-h-screen py-8 bg-linear-to-br from-slate-900 via-purple-900 to-slate-900"
+      className="relative w-full min-h-screen py-8 bg-linear-to-br from-slate-900 via-blue-950 to-slate-900"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 ">
         <div className="absolute animate-pulse top-25 left-15 w-60 h-60 rounded-full bg-cyan-400/20 blur-3xl" />
-        <div className="absolute animate-bounce bottom-15 right-15 w-70 h-70 rounded-full bg-yellow-500/30 blur-3xl" />
+        <div className="absolute animate-bounce bottom-15 right-15 w-70 h-70 rounded-full bg-indigo-500/30 blur-3xl" />
       </div>
 
       {/* Skills Content */}

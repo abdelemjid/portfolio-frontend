@@ -19,7 +19,7 @@ const Skill = ({ title, progress, Icon }: Props) => {
         translateX: 0,
         transition: { delay: 0.4, duration: 0.8 },
       }}
-      className="w-full p-5 rounded-md bg-neutral-100/6 border border-neutral-100/15"
+      className="w-full p-3 rounded-md bg-neutral-100/6 border border-neutral-100/15 shadow-gray-900/30 shadow-lg"
     >
       {/* Icon and Progress Number */}
       <div className="flex flex-row justify-between items-center">
@@ -36,14 +36,14 @@ const Skill = ({ title, progress, Icon }: Props) => {
       </div>
 
       {/* Progress Bar */}
-      <div className="mt-8 w-full">
+      <div className="mt-6 w-full">
         {/* Bar */}
-        <div className="relative w-full h-4 rounded-full border border-neutral-100/20 bg-neutral-100/8">
+        <div className="relative w-full h-2 rounded-full border border-neutral-100/20 bg-neutral-100/8">
           <span
             className="absolute inset-0 h-full rounded-md"
             style={{
               width: `${progress}%`,
-              background: `linear-gradient(90deg, #a1a1a1, ${progress >= 20 && progress < 40 ? "#ff8904" : progress >= 40 && progress < 60 ? "#05df72" : progress >= 60 && progress < 80 ? "#7c86ff" : progress >= 80 ? "#fb2c36" : "#a1a1a1"})`,
+              background: `linear-gradient(90deg, #a1a1a1, ${progress >= 25 && progress < 50 ? "#ff8904" : progress >= 50 && progress < 75 ? "#05df72" : progress >= 75 && progress <= 100 ? "#7c86ff" : "#a1a1a1"})`,
             }}
           />
         </div>
@@ -62,9 +62,9 @@ const Skill = ({ title, progress, Icon }: Props) => {
           <span className="text-xs text-indigo-400 font-semibold">
             {t("skills.advanced")}
           </span>
-          <span className="text-xs text-red-500 font-semibold">
+          {/* <span className="text-xs text-red-500 font-semibold">
             {t("skills.expert")}
-          </span>
+          </span> */}
         </div>
       </div>
     </motion.div>

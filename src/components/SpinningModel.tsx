@@ -29,7 +29,7 @@ const SpinningModel = ({
   }, [scene]);
 
   // Horizontal spinning animation
-  useFrame((_, delta) => {
+  useFrame((_, __) => {
     if (groupRef.current) {
       groupRef.current.rotation.y += rotationSpeed;
     }

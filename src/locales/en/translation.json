@@ -6,23 +6,25 @@
     "projects": "Projects",
     "contact": "Contact"
   },
-
   "hero": {
     "title": "Build The <1>Future</1>",
-    "subtitle": "Hi 👋 This is Abdelemjid. I am a software developer. With this portfolio, I'm sharing my passion for web development"
+    "subtitle": "Hi 👋 This is Abdelemjid. I am a software developer. With this portfolio, I'm sharing my passion for web development",
+    "scroll_down": "Scroll Down"
   },
-
   "about": {
     "title": "About Me",
     "subtitle": "Get more about me",
     "personal_info": "Personal Info",
-    "first_name": "First Name:",
+    "name": "Name:",
     "nationality": "Nationality:",
+    "moroccan": "Moroccan",
+    "available": "Available",
     "freelance": "Freelance:",
     "graduated": "Graduated From:",
     "specialization": "Specialization:",
     "whatsapp": "WhatsApp:",
     "languages": "Languages:",
+    "langs": "Arabic, English",
     "contact_me": "Contact me on WhatsApp",
     "achievement": "My Achievement",
     "experience": "Years of Experience",
@@ -30,7 +32,6 @@
     "customers": "Happy customers",
     "awards": "Awards Won"
   },
-
   "skills": {
     "title": "My Skills",
     "subtitle": "Tools, Technologies, and Frameworks I am using",
@@ -45,7 +46,6 @@
     "devops": "DevOps",
     "other_skills": "Other Skills"
   },
-
   "projects": {
     "title": "Projects",
     "subtitle": "A Showcase of My Projects and Creative Work",
@@ -54,5 +54,34 @@
     "view": "View Project",
     "alive": "Alive",
     "lifeless": "Lifeless"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "You need to build your own website, or you want to update your website(MERN Stack) by adding some features feel free to contact me.",
+    "fullname": "Full Name *",
+    "email": "Email *",
+    "message": "Message *",
+    "send": "Send",
+    "fullname_placeholder": "John Doe",
+    "email_placeholder": "john.doe@gmail.com",
+    "message_placeholder": "Tell me about your project, idea...",
+    "sending": "Sending...",
+    "me": "This is Me!",
+    "send_me": "Send Me Direct Message",
+    "social": "Social Media"
+  },
+  "footer": {
+    "about": "A full-stack developer specializing in the MERN stack, building modern web applications. A graduate of ALX, dedicated to transforming ideas into real-world web projects.",
+    "available": "Available to Work",
+    "time": "Mostly for 24/7",
+    "fiverr": "Hire me on Fiverr",
+    "front": "Front End",
+    "back": "Back End",
+    "api": "API Integration",
+    "services": "Services",
+    "quick": "Quick Links",
+    "all_rights": "All Rights Reserved",
+    "built": "Built with ❤️ By Me",
+    "created": "Built With"
   }
 }

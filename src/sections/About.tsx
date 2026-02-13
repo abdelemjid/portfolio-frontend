@@ -16,12 +16,12 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative w-full min-h-screen py-8 bg-linear-to-bl from-slate-900 via-purple-900 to-slate-900"
+      className="relative w-full min-h-screen py-8 bg-linear-to-bl from-slate-900 via-blue-950 to-slate-900"
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute animate-pulse -top-1/8 right-1/8  w-60 h-60 rounded-full bg-purple-500/30 blur-3xl" />
-        <div className="absolute animate-bounce bottom-15 left-0 w-70 h-70 rounded-full bg-indigo-500/30 blur-3xl" />
+        <div className="absolute animate-pulse top-1/8 right-1/8  w-60 h-60 rounded-full bg-purple-500/30 blur-3xl" />
+        <div className="absolute animate-bounce bottom-[50%] left-[50%] translate-y-[70%] -translate-x-[70%]  w-70 h-70 rounded-full bg-indigo-500/30 blur-3xl" />
       </div>
 
       {/* About Content */}
@@ -41,7 +41,7 @@ const About = () => {
               translateX: 0,
               transition: { delay: 0.5, duration: 0.8 },
             }}
-            className="flex flex-col gap-4 bg-neutral-100/6 border border-neutral-100/15 backdrop-blur-md p-4 rounded-md"
+            className="flex flex-col gap-4 bg-neutral-100/6 border border-neutral-100/15 backdrop-blur-md p-4 rounded-md shadow-gray-900/50 shadow-lg"
           >
             {/* Subsection Title */}
             <div className="flex flex-row gap-3">
@@ -57,81 +57,81 @@ const About = () => {
             {/* Details */}
             <div className="flex flex-col gap-3 mt-8">
               {/* Full Name */}
-              <div className="flex flex-row gap-4 bg-neutral-100/20 backdrop-blur-sm rounded-md p-2">
-                <div className="p-1 rounded-md border border-amber-400/50">
-                  <LuSignature className="text-2xl text-amber-400" />
+              <div className="flex flex-row gap-4 bg-neutral-100/8 backdrop-blur-sm rounded-md p-2">
+                <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
+                  <LuSignature className="text-2xl text-neutral-100" />
                 </div>
 
                 <div className="flex flex-row gap-3 items-center">
                   <h3 className="text-sm text-semibold text-white/80">
-                    {t("about.first_name")}
+                    {t("about.name")}
                   </h3>
-                  <p className="text-amber-400">Abdelemjid</p>
+                  <p className="text-purple-400">Abdelemjid</p>
                 </div>
               </div>
               {/* Nationality */}
-              <div className="flex flex-row gap-4 bg-neutral-100/20 backdrop-blur-sm rounded-md p-2">
-                <div className="p-1 rounded-md border border-amber-400/50">
-                  <IoFlagOutline className="text-2xl text-amber-400" />
+              <div className="flex flex-row gap-4 bg-neutral-100/8 backdrop-blur-sm rounded-md p-2">
+                <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
+                  <IoFlagOutline className="text-2xl text-neutral-100" />
                 </div>
 
                 <div className="flex flex-row gap-3 items-center">
                   <h3 className="text-sm text-semibold text-white/80">
                     {t("about.nationality")}
                   </h3>
-                  <p className="text-amber-400">Moroccan</p>
+                  <p className="text-purple-400">{t("about.moroccan")}</p>
                 </div>
               </div>
               {/* Freelance */}
-              <div className="flex flex-row gap-4 bg-neutral-100/20 backdrop-blur-sm rounded-md p-2">
-                <div className="p-1 rounded-md border border-amber-400/50">
-                  <SiUpwork className="text-2xl text-amber-400" />
+              <div className="flex flex-row gap-4 bg-neutral-100/8 backdrop-blur-sm rounded-md p-2">
+                <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
+                  <SiUpwork className="text-2xl text-neutral-100" />
                 </div>
 
                 <div className="flex flex-row gap-3 items-center">
                   <h3 className="text-sm text-semibold text-white/80">
                     {t("about.freelance")}
                   </h3>
-                  <p className="text-amber-400">Available</p>
+                  <p className="text-purple-400">{t("about.available")}</p>
                 </div>
               </div>
               {/* Graduated From */}
-              <div className="flex flex-row gap-4 bg-neutral-100/20 backdrop-blur-sm rounded-md p-2">
-                <div className="p-1 rounded-md border border-amber-400/50">
-                  <RiGraduationCapLine className="text-2xl text-amber-400" />
+              <div className="flex flex-row gap-4 bg-neutral-100/8 backdrop-blur-sm rounded-md p-2">
+                <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
+                  <RiGraduationCapLine className="text-2xl text-neutral-100" />
                 </div>
 
                 <div className="flex flex-row gap-3 items-center">
                   <h3 className="text-sm text-semibold text-white/80">
                     {t("about.graduated")}
                   </h3>
-                  <p className="text-amber-400">ALX of Africa</p>
+                  <p className="text-purple-400">ALX of Africa</p>
                 </div>
               </div>
               {/* Specialization */}
-              <div className="flex flex-row gap-4 bg-neutral-100/20 backdrop-blur-sm rounded-md p-2">
-                <div className="p-1 rounded-md border border-amber-400/50">
-                  <PiStamp className="text-2xl text-amber-400" />
+              <div className="flex flex-row gap-4 bg-neutral-100/8 backdrop-blur-sm rounded-md p-2">
+                <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
+                  <PiStamp className="text-2xl text-neutral-100" />
                 </div>
 
                 <div className="flex flex-row gap-3 items-center">
                   <h3 className="text-sm text-semibold text-white/80">
                     {t("about.specialization")}
                   </h3>
-                  <p className="text-amber-400">Back-End</p>
+                  <p className="text-purple-400">Back-End</p>
                 </div>
               </div>
               {/* WhatsApp */}
-              <div className="flex flex-row gap-4 bg-neutral-100/20 backdrop-blur-sm rounded-md p-2">
-                <div className="p-1 rounded-md border border-amber-400/50">
-                  <FaWhatsapp className="text-2xl text-amber-400" />
+              <div className="flex flex-row gap-4 bg-neutral-100/8 backdrop-blur-sm rounded-md p-2">
+                <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
+                  <FaWhatsapp className="text-2xl text-neutral-100" />
                 </div>
 
                 <div className="flex flex-row gap-3 items-center">
                   <h3 className="text-sm text-semibold text-white/80">
                     {t("about.whatsapp")}
                   </h3>
-                  <p className="text-amber-400">
+                  <p className="text-purple-400">
                     <a
                       href="https://wa.me/212689366092?text=Hello%20I%20need%20your%20help%20in%20"
                       target="_blank"
@@ -144,16 +144,16 @@ const About = () => {
                 </div>
               </div>
               {/* Languages */}
-              <div className="flex flex-row gap-4 bg-neutral-100/20 backdrop-blur-sm rounded-md p-2">
-                <div className="p-1 rounded-md border border-amber-400/50">
-                  <TbLanguage className="text-2xl text-amber-400" />
+              <div className="flex flex-row gap-4 bg-neutral-100/8 backdrop-blur-sm rounded-md p-2">
+                <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
+                  <TbLanguage className="text-2xl text-neutral-100" />
                 </div>
 
                 <div className="flex flex-row gap-3 items-center">
                   <h3 className="text-sm text-semibold text-white/80">
                     {t("about.languages")}
                   </h3>
-                  <p className="text-amber-400">Arabic, English</p>
+                  <p className="text-purple-400">{t("about.langs")}</p>
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@ const About = () => {
               translateX: 0,
               transition: { delay: 0.7, duration: 0.8 },
             }}
-            className="flex flex-col gap-4 bg-neutral-100/6 border border-neutral-100/15 backdrop-blur-md p-4 rounded-md"
+            className="flex flex-col gap-4 bg-neutral-100/6 border border-neutral-100/15 backdrop-blur-md p-4 rounded-md shadow-gray-900/30 shadow-lg"
           >
             {/* Subsection Title */}
             <div className="flex flex-row gap-3">
@@ -183,13 +183,13 @@ const About = () => {
             {/* Details */}
             <div className="grid grid-cols-2 gap-3 mt-8">
               {/* Years of Experience */}
-              <div className="group relative overflow-hidden flex flex-col gap-3 rounded-md bg-neutral-100/20 p-5 transition-all duration-200 hover:-translate-y-1 cursor-pointer">
+              <div className="group relative overflow-hidden flex flex-col gap-3 border border-neutral-100/15 rounded-md bg-neutral-100/8 p-5 transition-all duration-200 hover:-translate-y-1 cursor-pointer">
                 {/* Hover Animation */}
-                <div className="absolute -top-3 -right-3 z-0 w-10 h-10 rounded-full bg-radial from-indigo-100 to-indigo-500 group-hover:w-12 group-hover:h-12 transition-all duration-200 blur-md" />
+                <div className="absolute -top-3 -right-3 z-0 w-10 h-10 rounded-full bg-radial from-indigo-100/60 to-indigo-500/60 group-hover:w-15 group-hover:h-15 transition-all duration-200 blur-md" />
 
                 {/* Content */}
                 <div className="flex flex-col justify-center items-center gap-3">
-                  <h2 className="text-4xl font-bold text-amber-400">
+                  <h2 className="text-4xl font-bold text-purple-400">
                     {new Date().getFullYear() - 2024}
                   </h2>
                   <p className="text-sm">{t("about.experience")}</p>
@@ -197,37 +197,37 @@ const About = () => {
               </div>
 
               {/* Completed Projects */}
-              <div className="group relative overflow-hidden flex flex-col gap-3 rounded-md bg-neutral-100/20 p-5 transition-all duration-200 hover:-translate-y-1 cursor-pointer">
+              <div className="group relative overflow-hidden flex flex-col gap-3 border border-neutral-100/15 rounded-md bg-neutral-100/8 p-5 transition-all duration-200 hover:-translate-y-1 cursor-pointer">
                 {/* Hover Animation */}
-                <div className="absolute -top-3 -right-3 z-0 w-10 h-10 rounded-full bg-radial from-indigo-100 to-indigo-500 group-hover:w-12 group-hover:h-12 transition-all duration-200 blur-md" />
+                <div className="absolute -top-3 -right-3 z-0 w-10 h-10 rounded-full bg-radial from-indigo-100/60 to-indigo-500/60 group-hover:w-15 group-hover:h-15 transition-all duration-200 blur-md" />
 
                 {/* Content */}
                 <div className="flex flex-col justify-center items-center gap-3">
-                  <h2 className="text-4xl font-bold text-amber-400">+3</h2>
+                  <h2 className="text-4xl font-bold text-purple-400">+3</h2>
                   <p className="text-sm">{t("about.project_completed")}</p>
                 </div>
               </div>
 
               {/* Happy Customers */}
-              <div className="group relative overflow-hidden flex flex-col gap-3 rounded-md bg-neutral-100/20 p-5 transition-all duration-200 hover:-translate-y-1 cursor-pointer">
+              <div className="group relative overflow-hidden flex flex-col gap-3 border border-neutral-100/15 rounded-md bg-neutral-100/8 p-5 transition-all duration-200 hover:-translate-y-1 cursor-pointer">
                 {/* Hover Animation */}
-                <div className="absolute -top-3 -right-3 z-0 w-10 h-10 rounded-full bg-radial from-indigo-100 to-indigo-500 group-hover:w-12 group-hover:h-12 transition-all duration-200 blur-md" />
+                <div className="absolute -top-3 -right-3 z-0 w-10 h-10 rounded-full bg-radial from-indigo-100/60 to-indigo-500/60 group-hover:w-15 group-hover:h-15 transition-all duration-200 blur-md" />
 
                 {/* Content */}
                 <div className="flex flex-col justify-center items-center gap-3">
-                  <h2 className="text-4xl font-bold text-amber-400">0</h2>
+                  <h2 className="text-4xl font-bold text-purple-400">0</h2>
                   <p className="text-sm">{t("about.customers")}</p>
                 </div>
               </div>
 
               {/* Awards Won */}
-              <div className="group relative overflow-hidden flex flex-col gap-3 rounded-md bg-neutral-100/20 p-5 transition-all duration-200 hover:-translate-y-1 cursor-pointer">
+              <div className="group relative overflow-hidden flex flex-col gap-3 border border-neutral-100/15 rounded-md bg-neutral-100/8 p-5 transition-all duration-200 hover:-translate-y-1 cursor-pointer">
                 {/* Hover Animation */}
-                <div className="absolute -top-3 -right-3 z-0 w-10 h-10 rounded-full bg-radial from-indigo-100 to-indigo-500 group-hover:w-12 group-hover:h-12 transition-all duration-200 blur-md" />
+                <div className="absolute -top-3 -right-3 z-0 w-10 h-10 rounded-full bg-radial from-indigo-100/60 to-indigo-500/60 group-hover:w-15 group-hover:h-15 transition-all duration-200 blur-md" />
 
                 {/* Content */}
                 <div className="flex flex-col justify-center items-center gap-3">
-                  <h2 className="text-4xl font-bold text-amber-400">0</h2>
+                  <h2 className="text-4xl font-bold text-purple-400">0</h2>
                   <p className="text-sm">{t("about.awards")}</p>
                 </div>
               </div>
