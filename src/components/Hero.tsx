@@ -14,13 +14,13 @@ const Hero = () => {
       </div>
 
       {/* 3D Canvas */}
-      <div className="absolute inset-0 z-10 md:right-[30%] md:top-[50%] md:translate-x-[50%] md:-translate-y-[50%] overflow-visible h-full">
+      <div className="z-10 absolute inset-0 h-[80%] w-[80%] mx-auto md:h-[70%] md:w-[50%] md:right-[30%] md:top-[40%] md:translate-x-[80%] md:-translate-y-[50%] overflow-visible">
         <Scene3D />
       </div>
 
       {/* Content Overlay */}
       <div className="pointer-events-none relative z-20 flex h-full items-center">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto">
           <div className="max-w-xl">
             <motion.h1
               initial={{ opacity: 0, translateX: -100 }}
