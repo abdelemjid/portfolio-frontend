@@ -8,16 +8,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Group related vendor libs together
-          "three-ecosystem": [
-            "three",
-            "@react-three/fiber",
-            "@react-three/drei",
-          ],
-          "react-vendor": ["react", "react-dom", "react-router-dom"],
-          "ui-libs": ["framer-motion", "@mui/material"],
-        },
+        manualChunks: undefined 
       },
     },
   },
