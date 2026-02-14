@@ -28,7 +28,7 @@ const Projects = () => {
           <Project
             title="Hotelier"
             description="A small project that I have worked on it in the end of the study in my ALX of Africa School's journey"
-            image="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            image="./images/project.jpg"
             tags={[
               "React",
               "Tailwindcss",
@@ -43,7 +43,7 @@ const Projects = () => {
           <Project
             title="Hotelier"
             description="A small project that I have worked on it in the end of the study in my ALX of Africa School's journey"
-            image="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            image="./images/project.jpg"
             tags={[
               "React",
               "Tailwindcss",
@@ -58,7 +58,7 @@ const Projects = () => {
           <Project
             title="Hotelier"
             description="A small project that I have worked on it in the end of the study in my ALX of Africa School's journey"
-            image="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            image="./images/project.jpg"
             tags={[
               "React",
               "Tailwindcss",

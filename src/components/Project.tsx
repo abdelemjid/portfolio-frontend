@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaArrowRight } from "react-icons/fa";
 import { LuTags } from "react-icons/lu";
-import { motion } from "motion/react";
 
 interface Props {
   title: string;
@@ -16,15 +15,7 @@ const Project = ({ title, link, image, description, tags, alive }: Props) => {
   const { t } = useTranslation();
 
   return (
-    <motion.div
-      initial={{ opacity: 0, translateX: -50 }}
-      whileInView={{
-        opacity: 1,
-        translateX: 0,
-        transition: { delay: 0.4, duration: 0.8 },
-      }}
-      className="group z-10 flex flex-col gap-5 rounded-xl overflow-hidden border-2 border-indigo-500/20 bg-linear-to-br from-indigo-500/10 to-blue-500/10 backdrop-blur-md hover:from-indigo-500/20 hover:to-blue-500/20 hover:-translate-y-1 transition-all duration-300 ease-in-out shadow-gray-900/30 shadow-lg"
-    >
+    <div className="group z-10 flex flex-col gap-5 rounded-xl overflow-hidden border-2 border-indigo-500/20 bg-linear-to-br from-indigo-500/10 to-blue-500/10 backdrop-blur-md hover:from-indigo-500/20 hover:to-blue-500/20 hover:-translate-y-1 transition-all duration-300 ease-in-out shadow-gray-900/30 shadow-lg">
       {/* Project Image */}
       <div className="relative w-full h-fit">
         <img
@@ -76,7 +67,7 @@ const Project = ({ title, link, image, description, tags, alive }: Props) => {
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

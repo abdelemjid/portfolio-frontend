@@ -28,15 +28,15 @@ const Skill = ({ title, progress, Icon }: Props) => {
           <div className="p-1 rounded-md bg-green-400/5 border border-green-400/40">
             <Icon className="text-lg text-green-400" />
           </div>
-          <h3 className="text-lg font-semibold">{title}</h3>
+          <h3 className="text-md font-semibold">{title}</h3>
         </div>
 
         {/* Progress Number */}
-        <h1 className="text-2xl font-bold">{progress}%</h1>
+        <h1 className="text-lg font-bold">{progress}%</h1>
       </div>
 
       {/* Progress Bar */}
-      <div className="mt-6 w-full">
+      <div className="mt-3 w-full">
         {/* Bar */}
         <div className="relative w-full h-2 rounded-full border border-neutral-100/20 bg-neutral-100/8">
           <span
