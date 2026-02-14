@@ -1,10 +1,9 @@
 import { Trans, useTranslation } from "react-i18next";
 import { motion } from "motion/react";
-import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
-import { Globe } from "./Glob";
-import { OrbitControls } from "@react-three/drei";
+import { lazy, Suspense } from "react";
 import { FaArrowDown } from "react-icons/fa";
+
+const GlobeScene = lazy(() => import("./GlobeScene"));
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -19,22 +18,9 @@ const Hero = () => {
 
       {/* 3D Globe Background */}
       <div className="absolute inset-0 z-0">
-        <Canvas
-          camera={{ position: [0, 0, 6], fov: 50 }}
-          style={{ background: "transparent" }}
-          dpr={[1, 2]}
-        >
-          <Suspense fallback={null}>
-            <Globe />
-          </Suspense>
-          <OrbitControls
-            enableZoom={false}
-            enablePan={false}
-            autoRotate={false}
-            minPolarAngle={Math.PI / 3}
-            maxPolarAngle={(2 * Math.PI) / 3}
-          />
-        </Canvas>
+        <Suspense fallback={null}>
+          <GlobeScene />
+        </Suspense>
       </div>
 
       {/* Content Overlay */}
@@ -42,12 +28,13 @@ const Hero = () => {
         <div className="container mx-auto">
           <div className="max-w-xl">
             <motion.h1
-              initial={{ opacity: 0, translateX: -100 }}
+              initial={{ opacity: 0, x: -100 }}
               whileInView={{
                 opacity: 1,
-                translateX: 0,
+                x: 0,
                 transition: { delay: 0.4, duration: 0.8 },
               }}
+              viewport={{ once: true }}
               className="mb-4 text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl"
             >
               <Trans i18nKey="hero.title">
@@ -59,13 +46,14 @@ const Hero = () => {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, translateX: -100 }}
+              initial={{ opacity: 0, x: -100 }}
               whileInView={{
                 opacity: 1,
-                translateX: 0,
+                x: 0,
                 transition: { delay: 0.6, duration: 0.8 },
               }}
-              className="mb-8 text-lg text-gray-300 md:text-xl bg-white/5 backdrop-blur-sm p-3 rounded-md border-2 border-gray-300/6"
+              viewport={{ once: true }}
+              className="mb-8 rounded-md border-2 border-gray-300/6 bg-white/5 p-3 text-lg text-gray-300 backdrop-blur-sm md:text-xl"
             >
               {t("hero.subtitle")}
             </motion.p>
@@ -75,19 +63,20 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0, translateY: -50 }}
+        initial={{ opacity: 0, y: -50 }}
         whileInView={{
           opacity: 1,
-          translateY: 0,
+          y: 0,
           transition: { delay: 0.8, duration: 0.8 },
         }}
-        className="z-10 absolute bottom-8 left-1/2 -translate-x-1/2"
+        viewport={{ once: true }}
+        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
       >
         <div className="flex flex-col items-center">
           <span className="mb-2 text-sm text-gray-100/80">
             {t("hero.scroll_down")}
           </span>
-          <a href="#about" className="p-3 animate-bounce hover:animate-none">
+          <a href="#about" className="animate-bounce p-3 hover:animate-none">
             <FaArrowDown size={25} className="text-neutral-100/80" />
           </a>
         </div>

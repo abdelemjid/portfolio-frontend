@@ -32,7 +32,7 @@ const About = () => {
           subtitle={t("about.subtitle").toUpperCase()}
         />
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-5">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(380px,1fr))] gap-5">
           {/* Personal Info */}
           <motion.div
             initial={{ opacity: 0, translateX: -50 }}
