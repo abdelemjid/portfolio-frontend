@@ -5,7 +5,6 @@ import {
   Environment,
   Float,
   ContactShadows,
-  Stars,
 } from "@react-three/drei";
 import Loader from "./Loader";
 
