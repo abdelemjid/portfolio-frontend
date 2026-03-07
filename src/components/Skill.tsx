@@ -19,7 +19,8 @@ const Skill = ({ title, progress, Icon }: Props) => {
         translateX: 0,
         transition: { delay: 0.4, duration: 0.8 },
       }}
-      className="w-full p-3 rounded-md bg-neutral-100/6 border border-neutral-100/15 shadow-gray-900/30 shadow-lg"
+      viewport={{ once: true }}
+      className="z-10 w-full p-3 rounded-md bg-linear-to-br from-neutral-500/20 to-neutral-500/20 backdrop-blur-lg border border-neutral-100/15 shadow-gray-900/30 shadow-lg transition-all duration-200 hover:-translate-y-0.75 hover:shadow-lg hover:shadow-blue-400/10 hover:border-blue-500/20 cursor-pointer"
     >
       {/* Icon and Progress Number */}
       <div className="flex flex-row justify-between items-center">

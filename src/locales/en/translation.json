@@ -7,8 +7,8 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Build The <1>Future</1>",
-    "subtitle": "Hi 👋 This is Abdelemjid. I am a software developer. With this portfolio, I'm sharing my passion for web development",
+    "title": "Hi, I'm <1>Abdelemjid</1>",
+    "subtitle": "I am a software developer. I have 2 years of experience with this portfolio; I'm sharing my passion for web development.",
     "scroll_down": "Scroll Down"
   },
   "about": {
@@ -46,6 +46,10 @@
     "devops": "DevOps",
     "other_skills": "Other Skills"
   },
+  "education": {
+    "title": "Education Timeline",
+    "subtitle": "Education progress as timeline"
+  },
   "projects": {
     "title": "Projects",
     "subtitle": "A Showcase of My Projects and Creative Work",
@@ -57,7 +61,7 @@
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "You need to build your own website, or you want to update your website(MERN Stack) by adding some features feel free to contact me.",
+    "subtitle": "You need to build or update your own website. Contact Me",
     "fullname": "Full Name *",
     "email": "Email *",
     "message": "Message *",
@@ -71,7 +75,7 @@
     "social": "Social Media"
   },
   "footer": {
-    "about": "A full-stack developer specializing in the MERN stack, building modern web applications. A graduate of ALX, dedicated to transforming ideas into real-world web projects.",
+    "about": "I'm a full-stack developer specialized in back-end using Node.js, and I'm building modern web applications with MERN stack technologies. A graduate of ALX, dedicated to transforming ideas into real-world web projects.",
     "available": "Available to Work",
     "time": "Mostly for 24/7",
     "fiverr": "Hire me on Fiverr",

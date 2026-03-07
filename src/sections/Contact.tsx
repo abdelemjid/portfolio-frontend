@@ -6,7 +6,7 @@ import pic from "/images/my_pic.jpg";
 import { FaInstagram } from "react-icons/fa";
 import { FiFacebook } from "react-icons/fi";
 import { useMutation } from "@tanstack/react-query";
-import { ApiClient } from "../utils/api-client";
+import * as api from "../utils/api-client";
 import { toast } from "sonner";
 import { IoPerson, IoSend } from "react-icons/io5";
 import { MdOutlineMessage } from "react-icons/md";
@@ -19,6 +19,9 @@ interface FormType {
 }
 
 const Contact = () => {
+  const isRTL = () => {
+    return document.documentElement.dir === "rtl";
+  };
   const { t } = useTranslation();
   const {
     register,
@@ -27,7 +30,7 @@ const Contact = () => {
   } = useForm<FormType>();
 
   const { mutate: sendMessage, isPending: isSending } = useMutation({
-    mutationFn: (data: FormType) => ApiClient.postMessage({ ...data }),
+    mutationFn: (data: FormType) => api.postMessage({ ...data }),
     onSuccess: () => {
       toast.success("Sent successfully.");
     },
@@ -37,13 +40,14 @@ const Contact = () => {
   });
 
   const onSubmit = (e: FormType) => {
+    console.log("Contact info:", e);
     sendMessage({ ...e });
   };
 
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen py-8 bg-linear-to-br from-slate-900 via-blue-950 to-slate-900 z-10"
+      className="relative w-full min-h-screen py-8 bg-linear-to-bl from-slate-900 via-blue-950 to-slate-900 z-10"
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
@@ -250,6 +254,7 @@ const Contact = () => {
                     ? t("contact.sending").toUpperCase()
                     : t("contact.send").toUpperCase()}
                   <IoSend
+                    style={{ rotate: isRTL() ? "180deg" : "" }}
                     className={`${isSending ? "animate-slide" : "group-hover:animate-slide"}`}
                   />
                 </button>

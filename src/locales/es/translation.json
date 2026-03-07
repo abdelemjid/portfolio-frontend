@@ -1,19 +1,20 @@
 {
   "navbar": {
     "home": "Inicio",
-    "about": "Acerca de",
+    "about": "Sobre mí",
     "skills": "Habilidades",
     "projects": "Proyectos",
     "contact": "Contacto"
   },
   "hero": {
-    "title": "Construye El <1>Futuro</1>",
-    "subtitle": "Hola 👋 Soy Abdelemjid. Soy desarrollador de software. Con este portafolio, comparto mi pasión por el desarrollo web"
+    "title": "Hola, soy <1>Abdelemjid</1>",
+    "subtitle": "Soy desarrollador de software. Tengo 2 años de experiencia; con este portafolio comparto mi pasión por el desarrollo web.",
+    "scroll_down": "Desplázate hacia abajo"
   },
   "about": {
-    "title": "Sobre Mí",
+    "title": "Sobre mí",
     "subtitle": "Conoce más sobre mí",
-    "personal_info": "Información Personal",
+    "personal_info": "Información personal",
     "name": "Nombre:",
     "nationality": "Nacionalidad:",
     "moroccan": "Marroquí",
@@ -24,16 +25,16 @@
     "whatsapp": "WhatsApp:",
     "languages": "Idiomas:",
     "langs": "Árabe, Inglés",
-    "contact_me": "Contáctame en WhatsApp",
-    "achievement": "Mis Logros",
-    "experience": "Años de Experiencia",
-    "project_completed": "Proyectos Completados",
-    "customers": "Clientes Satisfechos",
-    "awards": "Premios Ganados"
+    "contact_me": "Contáctame por WhatsApp",
+    "achievement": "Mis logros",
+    "experience": "Años de experiencia",
+    "project_completed": "Proyectos completados",
+    "customers": "Clientes satisfechos",
+    "awards": "Premios ganados"
   },
   "skills": {
-    "title": "Mis Habilidades",
-    "subtitle": "Herramientas, Tecnologías y Frameworks que utilizo",
+    "title": "Mis habilidades",
+    "subtitle": "Herramientas, tecnologías y frameworks que utilizo",
     "beginner": "Principiante",
     "elementary": "Elemental",
     "intermediate": "Intermedio",
@@ -41,46 +42,50 @@
     "expert": "Experto",
     "frontend": "Frontend",
     "backend": "Backend",
-    "database": "Base de Datos",
+    "database": "Base de datos",
     "devops": "DevOps",
-    "other_skills": "Otras Habilidades"
+    "other_skills": "Otras habilidades"
+  },
+  "education": {
+    "title": "Cronología educativa",
+    "subtitle": "Progreso educativo en forma de cronología"
   },
   "projects": {
     "title": "Proyectos",
-    "subtitle": "Una Muestra de Mis Proyectos y Trabajo Creativo",
-    "project_image": "Imagen del Proyecto",
+    "subtitle": "Una muestra de mis proyectos y trabajo creativo",
+    "project_image": "Imagen del proyecto",
     "tags": "Tecnologías",
-    "view": "Ver Proyecto",
+    "view": "Ver proyecto",
     "alive": "Activo",
     "lifeless": "Inactivo"
   },
   "contact": {
     "title": "Contáctanos",
-    "subtitle": "¿Necesitas crear tu propio sitio web, o quieres actualizar tu sitio (MERN Stack) agregando algunas funciones? No dudes en contactarme.",
-    "fullname": "Nombre Completo *",
-    "email": "Correo Electrónico *",
+    "subtitle": "¿Necesitas crear o actualizar tu sitio web? Contáctame",
+    "fullname": "Nombre completo *",
+    "email": "Correo electrónico *",
     "message": "Mensaje *",
     "send": "Enviar",
-    "fullname_placeholder": "Juan García",
-    "email_placeholder": "juan.garcia@gmail.com",
+    "fullname_placeholder": "Juan Pérez",
+    "email_placeholder": "juan.perez@gmail.com",
     "message_placeholder": "Cuéntame sobre tu proyecto, idea...",
     "sending": "Enviando...",
-    "me": "¡Este soy Yo!",
-    "send_me": "Envíame un Mensaje Directo",
-    "social": "Redes Sociales"
+    "me": "¡Este soy yo!",
+    "send_me": "Envíame un mensaje directo",
+    "social": "Redes sociales"
   },
   "footer": {
-    "about": "Desarrollador full-stack especializado en MERN stack, construyendo aplicaciones web modernas. Graduado de ALX, dedicado a transformar ideas en proyectos web reales.",
-    "available": "Disponible para Trabajar",
+    "about": "Soy un desarrollador full-stack especializado en back-end con Node.js, y construyo aplicaciones web modernas con tecnologías MERN stack. Graduado de ALX, dedicado a transformar ideas en proyectos web reales.",
+    "available": "Disponible para trabajar",
     "time": "Disponible las 24 horas",
     "fiverr": "Contrátame en Fiverr",
     "front": "Front End",
     "back": "Back End",
     "api": "Integración de API",
     "services": "Servicios",
-    "quick": "Enlaces Rápidos",
-    "all_rights": "Todos los Derechos Reservados",
-    "built": "Hecho con ❤️ Por Mí",
-    "created": "Creado Con"
+    "quick": "Enlaces rápidos",
+    "all_rights": "Todos los derechos reservados",
+    "built": "Hecho con ❤️ por mí",
+    "created": "Creado con"
   }
 }

@@ -1,33 +1,32 @@
-import { useTranslation } from "react-i18next";
 import SectionTitle from "../components/SectionTitle";
-import { IoMdCode } from "react-icons/io";
 import Skill from "../components/Skill";
-import {
-  FaCode,
-  FaCss3,
-  FaJava,
-  FaNode,
-  FaNodeJs,
-  FaReact,
-} from "react-icons/fa";
-import { SiAndroidstudio, SiGnubash, SiNginx } from "react-icons/si";
-import {
-  TbBrandMongodb,
-  TbBrandMysql,
-  TbBrandPython,
-  TbBrandTypescript,
-} from "react-icons/tb";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { IoBrowsersOutline } from "react-icons/io5";
-import { CiServer } from "react-icons/ci";
-import { SiExpress } from "react-icons/si";
-import { FiDatabase } from "react-icons/fi";
-import { LiaUserShieldSolid } from "react-icons/lia";
-import { VscAzureDevops } from "react-icons/vsc";
 import FieldTitle from "../components/FieldTitle";
+import * as api from "../utils/api-client";
+import { useTranslation } from "react-i18next";
+import * as FaIcons from "react-icons/fa";
+import { useQuery } from "@tanstack/react-query";
+import { useEffect } from "react";
+import { toast } from "sonner";
 
 const Skills = () => {
   const { t } = useTranslation();
+
+  // categories
+  const {
+    data: categories,
+    isError,
+    error,
+    isLoading,
+  } = useQuery({
+    queryKey: ["categories"],
+    queryFn: () => api.getEndPoint("categories"),
+  });
+
+  useEffect(() => {
+    if (!isLoading && isError && error) {
+      toast.error("Skills Error", { description: "Error fetching skills!" });
+    }
+  }, [isError, error]);
 
   return (
     <section
@@ -45,70 +44,37 @@ const Skills = () => {
         {/* Section Title */}
         <SectionTitle
           title={t("skills.title")}
-          subtitle={t("skills.subtitle").toUpperCase()}
+          subtitle={t("skills.subtitle")}
         />
 
-        {/* Subsection Title */}
-        <FieldTitle
-          fieldTitle={t("skills.frontend")}
-          Icon={IoBrowsersOutline}
-        />
+        {categories &&
+          categories.map((category: any) => {
+            const categoryIcon = FaIcons[category.icon as keyof typeof FaIcons];
 
-        {/* Frontend Skills */}
-        <div className="grid md:grid-cols-2 gap-5">
-          <Skill title="HTML" progress={85} Icon={IoMdCode} />
-          <Skill title="CSS" progress={80} Icon={FaCss3} />
-          <Skill title="JS" progress={88} Icon={FaNodeJs} />
-          <Skill title="TS" progress={80} Icon={TbBrandTypescript} />
-          <Skill title="React" progress={70} Icon={FaReact} />
-          <Skill title="TailwindCSS" progress={75} Icon={RiTailwindCssFill} />
-          <Skill title="NodeJS" progress={82} Icon={FaNode} />
-        </div>
+            return (
+              <>
+                {/* Subsection Title */}
+                <FieldTitle fieldTitle={category.name} Icon={categoryIcon} />
 
-        {/* Subsection Title */}
-        <FieldTitle fieldTitle={t("skills.backend")} Icon={CiServer} />
+                {/* Skills */}
+                <div className="grid md:grid-cols-2 gap-5">
+                  {category &&
+                    category.skills?.map((skill: any) => {
+                      const skillIcon =
+                        FaIcons[skill.icon as keyof typeof FaIcons];
 
-        {/* Backend Skills */}
-        <div className="grid md:grid-cols-2 gap-5">
-          <Skill title="NodeJS" progress={82} Icon={FaNode} />
-          <Skill title="ExpressJS" progress={70} Icon={SiExpress} />
-          <Skill title="API Integration" progress={81} Icon={FaCode} />
-          <Skill
-            title="Role Based Auth"
-            progress={78}
-            Icon={LiaUserShieldSolid}
-          />
-          <Skill title="" progress={81} Icon={FaCode} />
-        </div>
-
-        {/* Subsection Title */}
-        <FieldTitle fieldTitle={t("skills.database")} Icon={FiDatabase} />
-
-        {/* Database Skills */}
-        <div className="grid md:grid-cols-2 gap-5">
-          <Skill title="MongoDB" progress={79} Icon={TbBrandMongodb} />
-          <Skill title="MySQL" progress={58} Icon={TbBrandMysql} />
-        </div>
-
-        {/* Subsection Title */}
-        <FieldTitle fieldTitle={t("skills.devops")} Icon={VscAzureDevops} />
-
-        {/* Database Skills */}
-        <div className="grid md:grid-cols-2 gap-5">
-          <Skill title="Nginx" progress={50} Icon={SiNginx} />
-        </div>
-
-        {/* Subsection Title */}
-        <FieldTitle fieldTitle={t("skills.other_skills")} Icon={FaCode} />
-
-        {/* Database Skills */}
-        <div className="grid md:grid-cols-2 gap-5">
-          <Skill title="C Language" progress={70} Icon={FaCode} />
-          <Skill title="Java" progress={68} Icon={FaJava} />
-          <Skill title="Python" progress={65} Icon={TbBrandPython} />
-          <Skill title="Bash" progress={52} Icon={SiGnubash} />
-          <Skill title="Android Studio" progress={65} Icon={SiAndroidstudio} />
-        </div>
+                      return (
+                        <Skill
+                          title={skill?.name}
+                          progress={skill?.proficiency}
+                          Icon={skillIcon}
+                        />
+                      );
+                    })}
+                </div>
+              </>
+            );
+          })}
       </div>
     </section>
   );
