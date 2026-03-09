@@ -1,8 +1,11 @@
 import { Trans, useTranslation } from "react-i18next";
 import { motion } from "motion/react";
-import { FaArrowDown } from "react-icons/fa";
+import { FaArrowDown, FaInstagram } from "react-icons/fa";
 import SpiderThreads from "../components/SpiderThreads";
 import pic from "/images/my_pic.jpg";
+import { VscFlame } from "react-icons/vsc";
+import { FiFacebook } from "react-icons/fi";
+import { PiLinkedinLogoLight } from "react-icons/pi";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -17,20 +20,20 @@ const Hero = () => {
 
       {/* Animated Background */}
       <SpiderThreads
-        nodeCount={150}
+        nodeCount={140}
         linkDistance={140}
         speed={0.5}
         threadColor="140, 160, 255"
         nodeColor="180, 200, 255"
         threadOpacity={0.4}
-        mouseInteraction
+        mouseInteraction={false}
         mouseRadius={180}
       />
 
       {/* Content Overlay */}
-      <div className="pointer-events-none relative z-20 flex h-full items-center">
-        <div className="container mx-auto flex flex-col md:flex-row gap-5 mt-20 lg:mt-0 items-center md:items-start">
-          <div className="max-w-lg md:max-w-md lg:max-w-lg">
+      <div className="relative z-20 flex h-full items-center">
+        <div className="container flex flex-row gap-8">
+          <div className="max-w-md">
             <motion.h1
               initial={{ opacity: 0, x: -100 }}
               whileInView={{
@@ -39,7 +42,7 @@ const Hero = () => {
                 transition: { delay: 0.4, duration: 0.8 },
               }}
               viewport={{ once: true }}
-              className="mb-4 text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl text-center md:text-start"
+              className="mb-4 text-5xl font-bold leading-tight text-white md:text-6xl lg:text-7xl"
             >
               <Trans i18nKey="hero.title">
                 Build the
@@ -61,6 +64,50 @@ const Hero = () => {
             >
               {t("hero.subtitle")}
             </motion.p>
+
+            {/* Social Media */}
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-row gap-1">
+                <VscFlame size={20} />
+                <h4 className="text-sm font-semibold">Follow Me</h4>
+              </div>
+
+              <div className="flex flex-row gap-2">
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/essaidabdelemjid/"
+                  target="_blank"
+                  className="relative group p-1.5 rounded-md bg-neutral-100/15 hover:bg-neutral-100/20 transition-all duration-150 hover:-translate-y-1 shadow-gray-900/30 shadow-md"
+                >
+                  <FaInstagram
+                    size={25}
+                    className="text-neutral-100/60 group-hover:text-pink-500 transition-all duration-150"
+                  />
+                </a>
+                {/* Facebook */}
+                <a
+                  href="https://www.facebook.com/m.e.j.i.d.tsu"
+                  target="_blank"
+                  className="relative group p-1.5 rounded-md bg-neutral-100/15 hover:bg-neutral-100/20 transition-all duration-150 hover:-translate-y-1 shadow-gray-900/30 shadow-md"
+                >
+                  <FiFacebook
+                    size={25}
+                    className="text-neutral-100/60 group-hover:text-blue-500 transition-all duration-150"
+                  />
+                </a>
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  className="relative group p-1.5 rounded-md bg-neutral-100/15 hover:bg-neutral-100/20 transition-all duration-150 hover:-translate-y-1 shadow-gray-900/30 shadow-md"
+                >
+                  <PiLinkedinLogoLight
+                    size={25}
+                    className="text-neutral-100/60 group-hover:text-blue-400 transition-all duration-150"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Picture with Animated Balls */}
@@ -72,7 +119,7 @@ const Hero = () => {
               transition: { delay: 0.4, duration: 0.8 },
             }}
             viewport={{ once: true }}
-            className="relative mx-auto w-60 h-60 lg:w-80 lg:h-80 mt-10 rounded-lg bg-linear-to-br from-blue-600 to-purple-600 rotate-5"
+            className="hidden md:block relative mx-auto w-60 h-60 lg:w-80 lg:h-80 mt-10 rounded-lg bg-linear-to-br from-blue-600 to-purple-600 rotate-5"
           >
             {/* Animated Balls */}
             <div className="absolute -bottom-3 -right-12 w-8 h-8 animate-bounce rounded-full bg-linear-to-r from-amber-200 to-orange-400 backdrop-blur-md shadow-gray-950/50 shadow-md" />
@@ -97,7 +144,7 @@ const Hero = () => {
           transition: { delay: 0.8, duration: 0.8 },
         }}
         viewport={{ once: true }}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
+        className="z-20 absolute bottom-2 left-1/2 -translate-x-1/2"
       >
         <div className="flex flex-col items-center">
           <span className="mb-2 text-sm text-gray-100/80">

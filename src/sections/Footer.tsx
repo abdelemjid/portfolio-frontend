@@ -42,7 +42,7 @@ const Footer = () => {
               </a>
               {/* Facebook */}
               <a
-                href="https://www.instagram.com/essaidabdelemjid/"
+                href="https://www.facebook.com/m.e.j.i.d.tsu"
                 target="_blank"
                 className="relative group p-1.5 rounded-md bg-neutral-100/15 hover:bg-neutral-100/20 transition-all duration-150 hover:-translate-y-1 shadow-gray-900/30 shadow-md"
               >
