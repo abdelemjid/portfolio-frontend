@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
 import type { IconType } from "react-icons";
-import { motion } from "motion/react";
 
 interface Props {
   title: string;
@@ -12,16 +11,7 @@ const Skill = ({ title, progress, Icon }: Props) => {
   const { t } = useTranslation();
 
   return (
-    <motion.div
-      initial={{ opacity: 0, translateX: -50 }}
-      whileInView={{
-        opacity: 1,
-        translateX: 0,
-        transition: { delay: 0.4, duration: 0.8 },
-      }}
-      viewport={{ once: true }}
-      className="z-10 w-full p-3 rounded-md bg-linear-to-br from-neutral-500/20 to-neutral-500/20 backdrop-blur-lg border border-neutral-100/15 shadow-gray-900/30 shadow-lg transition-all duration-200 hover:-translate-y-0.75 hover:shadow-lg hover:shadow-blue-400/10 hover:border-blue-500/20 cursor-pointer"
-    >
+    <div className="z-10 w-full p-3 rounded-md bg-linear-to-br from-neutral-500/20 to-neutral-500/20 backdrop-blur-lg border-2 border-neutral-100/10 shadow-gray-900/30 shadow-lg transition-all duration-200 hover:-translate-y-0.75 hover:shadow-indigo-400/10 hover:border-indigo-500/50 cursor-pointer">
       {/* Icon and Progress Number */}
       <div className="flex flex-row justify-between items-center">
         {/* Icon */}
@@ -68,7 +58,7 @@ const Skill = ({ title, progress, Icon }: Props) => {
           </span> */}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

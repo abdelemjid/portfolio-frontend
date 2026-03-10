@@ -6,6 +6,7 @@ import * as api from "../utils/api-client";
 import { useEffect } from "react";
 import { toast } from "sonner";
 import type { ProjectType } from "../types/Project";
+import { AnimatedSlideCard } from "../components/AnimatedSlideCard";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -30,8 +31,8 @@ const Projects = () => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute animate-pulse top-[15%] left-[20%]  w-60 h-60 rounded-full bg-purple-500/30 blur-3xl" />
-        <div className="absolute animate-bounce bottom-[20%] right-[10%] w-70 h-70 rounded-full bg-indigo-500/30 blur-3xl" />
+        <div className="absolute top-10 left-10 w-95 h-95 rounded-full bg-purple-500/20 blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-95 h-95 rounded-full bg-indigo-500/20 blur-3xl" />
       </div>
 
       {/* Projects Content */}
@@ -44,16 +45,18 @@ const Projects = () => {
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-5">
           {projects &&
-            projects.map((project: ProjectType) => (
-              <Project
-                key={project?._id}
-                title={project?.title}
-                description={project?.description}
-                image={project?.image}
-                tags={project?.technologies?.toString().split(",")}
-                alive={project?.alive}
-                link={project?.link}
-              />
+            projects.map((project: ProjectType, index: number) => (
+              <AnimatedSlideCard direction="top" delay={100 * index}>
+                <Project
+                  key={project?._id}
+                  title={project?.title}
+                  description={project?.description}
+                  image={project?.image}
+                  tags={project?.technologies?.toString().split(",")}
+                  alive={project?.alive}
+                  link={project?.link}
+                />
+              </AnimatedSlideCard>
             ))}
         </div>
       </div>

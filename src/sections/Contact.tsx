@@ -51,8 +51,8 @@ const Contact = () => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute animate-bounce top-1/8 right-1/8  w-60 h-60 rounded-full bg-purple-500/30 blur-3xl" />
-        <div className="absolute animate-pulse bottom-15 left-0 w-70 h-70 rounded-full bg-indigo-500/30 blur-3xl" />
+        <div className="absolute top-1/8 right-1/8 w-80 h-80 rounded-full bg-purple-500/20 blur-3xl" />
+        <div className="absolute bottom-15 left-0 w-90 h-90 rounded-full bg-indigo-500/20 blur-3xl" />
       </div>
 
       {/* Projects Content */}
@@ -77,7 +77,10 @@ const Contact = () => {
             <div className="relative mx-auto w-60 h-60 mt-10 rounded-lg bg-linear-to-br from-blue-600 to-purple-600 rotate-5">
               {/* Animated Balls */}
               <div className="absolute -top-3 -right-12 w-8 h-8 animate-bounce rounded-full bg-linear-to-r from-amber-200 to-orange-400 shadow-gray-950/50 shadow-md" />
-              <div className="absolute -bottom-5 -left-15 w-12 h-12 animate-bounce rounded-full bg-linear-to-r from-blue-600 to-purple-600 shadow-gray-950/50 shadow-md" />
+              <div
+                style={{ animationDelay: "160ms" }}
+                className="absolute -bottom-5 -left-15 w-12 h-12 animate-bounce rounded-full bg-linear-to-r from-blue-600 to-purple-600 shadow-gray-950/50 shadow-md"
+              />
 
               {/* Picture */}
               <img
@@ -124,7 +127,7 @@ const Contact = () => {
               </a>
               {/* LinkedIn */}
               <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/abdelemjid-essaid-0x00"
                 target="_blank"
                 className="relative group p-2 rounded-lg bg-neutral-100/15 hover:bg-neutral-100/20 transition-all duration-150 hover:-translate-y-1 shadow-gray-900/30 shadow-md"
               >

@@ -13,6 +13,8 @@ export function TimelineItem({ entry, index }: TimelineItemProps) {
   const itemRef = useRef<HTMLDivElement>(null);
   const isLeft = index % 2 === 0;
 
+  const dir = document.documentElement.dir as "ltr" | "rtl";
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([intersectionEntry]) => {
@@ -122,7 +124,9 @@ export function TimelineItem({ entry, index }: TimelineItemProps) {
       {/* Mobile layout */}
       <div className="flex w-full items-start md:hidden">
         {/* Timeline node - mobile */}
-        <div className="relative z-10 mr-4 flex shrink-0 items-start pt-1">
+        <div
+          className={`relative z-10 ${dir === "rtl" ? "ml-4" : "mr-4"} flex shrink-0 items-start pt-1`}
+        >
           <div
             className={`
               transition-all duration-700 ease-out

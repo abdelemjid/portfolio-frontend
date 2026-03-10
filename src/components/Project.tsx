@@ -20,13 +20,13 @@ const Project = ({ title, link, image, description, tags, alive }: Props) => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{
-        opacity: 1,
-        transition: { delay: 0.4, duration: 0.8 },
-      }}
-      viewport={{ once: true }}
+    <div
+      // initial={{ opacity: 0 }}
+      // whileInView={{
+      //   opacity: 1,
+      //   transition: { delay: 0.4, duration: 0.8 },
+      // }}
+      // viewport={{ once: true }}
       className="group z-10 flex flex-col gap-5 rounded-xl overflow-hidden border-2 border-indigo-500/10 bg-neutral-500/15 backdrop-blur-lg hover:-translate-y-1 hover:shadow-blue-400/10 hover:border-blue-400/10 transition-all duration-300 ease-in-out shadow-gray-900/30 shadow-lg"
     >
       {/* Project Image */}
@@ -86,7 +86,7 @@ const Project = ({ title, link, image, description, tags, alive }: Props) => {
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

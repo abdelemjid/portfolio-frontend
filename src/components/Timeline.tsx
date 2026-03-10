@@ -2,6 +2,8 @@ import type { EducationItem } from "../types/EducationType";
 import { TimelineItem } from "./TimelineItem";
 
 const Timeline = ({ data }: { data: EducationItem[] }) => {
+  const dir = document.documentElement.dir as "ltr" | "rtl";
+
   return (
     <div className="relative">
       {/* Vertical line - Desktop */}
@@ -12,7 +14,9 @@ const Timeline = ({ data }: { data: EducationItem[] }) => {
       </div>
 
       {/* Vertical line - Mobile */}
-      <div className="absolute left-5 top-0 h-full w-px md:hidden">
+      <div
+        className={`absolute ${dir === "ltr" ? "left-5" : "right-5"} top-0 h-full w-px md:hidden`}
+      >
         <div className="h-full w-full bg-linear-to-b from-transparent via-blue-500/30 to-transparent" />
         <div className="absolute inset-0 w-px bg-linear-to-b from-transparent via-blue-400/20 to-transparent blur-sm" />
       </div>

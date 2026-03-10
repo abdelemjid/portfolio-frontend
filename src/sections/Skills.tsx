@@ -7,6 +7,7 @@ import * as FaIcons from "react-icons/fa";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect } from "react";
 import { toast } from "sonner";
+import { AnimatedSlideCard } from "../components/AnimatedSlideCard";
 
 const Skills = () => {
   const { t } = useTranslation();
@@ -35,8 +36,8 @@ const Skills = () => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 ">
-        <div className="absolute animate-pulse top-25 left-15 w-60 h-60 rounded-full bg-cyan-400/20 blur-3xl" />
-        <div className="absolute animate-bounce bottom-15 right-15 w-70 h-70 rounded-full bg-indigo-500/30 blur-3xl" />
+        <div className="absolute top-25 left-15 w-90 h-90 rounded-full bg-cyan-400/20 blur-3xl" />
+        <div className="absolute bottom-15 right-15 w-80 h-80 rounded-full bg-indigo-500/30 blur-3xl" />
       </div>
 
       {/* Skills Content */}
@@ -59,16 +60,21 @@ const Skills = () => {
                 {/* Skills */}
                 <div className="grid md:grid-cols-2 gap-5">
                   {category &&
-                    category.skills?.map((skill: any) => {
+                    category.skills?.map((skill: any, index: number) => {
                       const skillIcon =
                         FaIcons[skill.icon as keyof typeof FaIcons];
 
                       return (
-                        <Skill
-                          title={skill?.name}
-                          progress={skill?.proficiency}
-                          Icon={skillIcon}
-                        />
+                        <AnimatedSlideCard
+                          direction="right"
+                          delay={100 * index}
+                        >
+                          <Skill
+                            title={skill?.name}
+                            progress={skill?.proficiency}
+                            Icon={skillIcon}
+                          />
+                        </AnimatedSlideCard>
                       );
                     })}
                 </div>

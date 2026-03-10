@@ -34,8 +34,8 @@ const Education = () => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0 ">
-        <div className="absolute animate-pulse top-25 left-15 w-60 h-60 rounded-full bg-cyan-400/20 blur-3xl" />
-        <div className="absolute animate-bounce bottom-15 right-15 w-70 h-70 rounded-full bg-indigo-500/30 blur-3xl" />
+        <div className="absolute top-25 left-15 w-80 h-80 rounded-full bg-cyan-400/20 blur-3xl" />
+        <div className="absolute bottom-15 right-15 w-120 h-120 rounded-full bg-indigo-500/30 blur-3xl" />
       </div>
 
       {/* Education Container */}
