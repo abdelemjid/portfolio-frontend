@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaArrowRight } from "react-icons/fa";
 import { LuTags } from "react-icons/lu";
-import { motion } from "motion/react";
 
 interface Props {
   title: string;

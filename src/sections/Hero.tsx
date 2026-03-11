@@ -1,5 +1,4 @@
 import { Trans, useTranslation } from "react-i18next";
-import { motion } from "motion/react";
 import { FaArrowDown, FaInstagram } from "react-icons/fa";
 import SpiderThreads from "../components/SpiderThreads";
 import pic from "/images/my_pic.jpg";
