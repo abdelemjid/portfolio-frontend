@@ -49,7 +49,7 @@ const Projects = () => {
               <AnimatedSlideCard direction="top" delay={100 * index}>
                 <Project
                   key={project?._id}
-                  title={project?.title}
+                  title={project?.name}
                   description={project?.description}
                   image={project?.image}
                   tags={project?.technologies?.toString().split(",")}

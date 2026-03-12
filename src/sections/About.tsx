@@ -13,6 +13,7 @@ import * as api from "../utils/api-client";
 import { useEffect } from "react";
 import { toast } from "sonner";
 import { AnimatedSlideCard } from "../components/AnimatedSlideCard";
+import AchievementItem from "../components/AchievementItem";
 
 const About = () => {
   const { t } = useTranslation();
@@ -86,7 +87,7 @@ const About = () => {
               {/* Details */}
               <div className="flex flex-col gap-3 mt-8">
                 {/* Full Name */}
-                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border border-neutral-100/10 shadow-lg hover:shadow-blue-400/10 hover:-translate-y-0.75 transition-all cursor-pointer">
+                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border-2 border-neutral-100/10 shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/50 hover:-translate-y-0.75 transition-all cursor-pointer">
                   <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
                     <LuSignature className="text-2xl text-neutral-100" />
                   </div>
@@ -99,7 +100,7 @@ const About = () => {
                   </div>
                 </div>
                 {/* Nationality */}
-                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border border-neutral-100/10 shadow-lg hover:shadow-blue-400/10 hover:-translate-y-0.75 transition-all cursor-pointer">
+                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border-2 border-neutral-100/10 shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/50 hover:-translate-y-0.75 transition-all cursor-pointer">
                   <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
                     <IoFlagOutline className="text-2xl text-neutral-100" />
                   </div>
@@ -112,7 +113,7 @@ const About = () => {
                   </div>
                 </div>
                 {/* Freelance */}
-                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border border-neutral-100/10 shadow-lg hover:shadow-blue-400/10 hover:-translate-y-0.75 transition-all cursor-pointer">
+                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border-2 border-neutral-100/10 shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/50 hover:-translate-y-0.75 transition-all cursor-pointer">
                   <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
                     <SiUpwork className="text-2xl text-neutral-100" />
                   </div>
@@ -125,7 +126,7 @@ const About = () => {
                   </div>
                 </div>
                 {/* Graduated From */}
-                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border border-neutral-100/10 shadow-lg hover:shadow-blue-400/10 hover:-translate-y-0.75 transition-all cursor-pointer">
+                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border-2 border-neutral-100/10 shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/50 hover:-translate-y-0.75 transition-all cursor-pointer">
                   <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
                     <RiGraduationCapLine className="text-2xl text-neutral-100" />
                   </div>
@@ -140,7 +141,7 @@ const About = () => {
                   </div>
                 </div>
                 {/* Specialization */}
-                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border border-neutral-100/10 shadow-lg hover:shadow-blue-400/10 hover:-translate-y-0.75 transition-all cursor-pointer">
+                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border-2 border-neutral-100/10 shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/50 hover:-translate-y-0.75 transition-all cursor-pointer">
                   <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
                     <PiStamp className="text-2xl text-neutral-100" />
                   </div>
@@ -155,7 +156,7 @@ const About = () => {
                   </div>
                 </div>
                 {/* WhatsApp */}
-                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border border-neutral-100/10 shadow-lg hover:shadow-blue-400/10 hover:-translate-y-0.75 transition-all cursor-pointer">
+                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border-2 border-neutral-100/10 shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/50 hover:-translate-y-0.75 transition-all cursor-pointer">
                   <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
                     <FaWhatsapp className="text-2xl text-neutral-100" />
                   </div>
@@ -177,7 +178,7 @@ const About = () => {
                   </div>
                 </div>
                 {/* Languages */}
-                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border border-neutral-100/10 shadow-lg hover:shadow-blue-400/10 hover:-translate-y-0.75 transition-all cursor-pointer">
+                <div className="flex flex-row gap-4 bg-neutral-500/15 backdrop-blur-sm rounded-md p-2 border-2 border-neutral-100/10 shadow-lg hover:shadow-indigo-500/20 hover:border-indigo-500/50 hover:-translate-y-0.75 transition-all cursor-pointer">
                   <div className="p-1 rounded-md border border-neutral-100/50 bg-neutral-100/10 backdrop-blur-md">
                     <TbLanguage className="text-2xl text-neutral-100" />
                   </div>
@@ -213,21 +214,10 @@ const About = () => {
               <div className="grid grid-cols-2 gap-3 mt-8">
                 {achievements &&
                   achievements?.map((achievement: any) => (
-                    <div
-                      key={achievement._id}
-                      className="group relative overflow-hidden flex flex-col gap-3 border-2 border-neutral-100/10 rounded-md bg-neutral-500/15 backdrop-blur-xl p-5 shadow-lg shadow-neutral-900/20 hover:border-indigo-500/50 hover:shadow-blue-400/10 transition-all duration-200 hover:-translate-y-1 cursor-pointer"
-                    >
-                      {/* Hover Animation */}
-                      <div className="absolute -top-3 -right-3 z-0 w-10 h-10 rounded-full bg-radial from-indigo-100/60 to-indigo-500/60 group-hover:w-15 group-hover:h-15 transition-all duration-200 blur-md" />
-
-                      {/* Content */}
-                      <div className="flex flex-col justify-center items-center gap-3">
-                        <h2 className="text-4xl font-bold text-purple-400">
-                          {achievement.count}
-                        </h2>
-                        <p className="text-sm">{achievement.title}</p>
-                      </div>
-                    </div>
+                    <AchievementItem
+                      key={achievement?._id}
+                      achievement={achievement}
+                    />
                   ))}
               </div>
             </div>

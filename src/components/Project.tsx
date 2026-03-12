@@ -19,15 +19,7 @@ const Project = ({ title, link, image, description, tags, alive }: Props) => {
   };
 
   return (
-    <div
-      // initial={{ opacity: 0 }}
-      // whileInView={{
-      //   opacity: 1,
-      //   transition: { delay: 0.4, duration: 0.8 },
-      // }}
-      // viewport={{ once: true }}
-      className="group z-10 flex flex-col gap-5 rounded-xl overflow-hidden border-2 border-indigo-500/10 bg-neutral-500/15 backdrop-blur-lg hover:-translate-y-1 hover:shadow-blue-400/10 hover:border-blue-400/10 transition-all duration-300 ease-in-out shadow-gray-900/30 shadow-lg"
-    >
+    <div className="group z-10 flex flex-col gap-5 rounded-xl overflow-hidden border-2 border-indigo-500/10 bg-neutral-500/15 backdrop-blur-xl hover:-translate-y-1 hover:shadow-indigo-500/20 hover:border-indigo-500/50 transition-all duration-300 ease-in-out shadow-gray-900/30 shadow-lg">
       {/* Project Image */}
       <div className="relative w-full h-fit">
         <img
@@ -55,7 +47,7 @@ const Project = ({ title, link, image, description, tags, alive }: Props) => {
           {description}
         </p>
         {/* Tags */}
-        <div className="flex flex-row gap-2 items-center text-neutral-100/50">
+        <div className="flex flex-row gap-2 items-center text-white/80 text-xs">
           <LuTags />
           <p>{t("projects.tags")}</p>
         </div>

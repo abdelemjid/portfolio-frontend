@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import type { IconType } from "react-icons";
+import { useInView } from "../hooks/useInView";
+import { useCountUp } from "../hooks/useCountUp";
 
 interface Props {
   title: string;
@@ -9,9 +11,14 @@ interface Props {
 
 const Skill = ({ title, progress, Icon }: Props) => {
   const { t } = useTranslation();
+  const { ref, isInView } = useInView({ threshold: 0.3 });
+  const count = useCountUp({ end: progress, enabled: isInView });
 
   return (
-    <div className="z-10 w-full p-3 rounded-md bg-linear-to-br from-neutral-500/20 to-neutral-500/20 backdrop-blur-lg border-2 border-neutral-100/10 shadow-gray-900/30 shadow-lg transition-all duration-200 hover:-translate-y-0.75 hover:shadow-indigo-400/10 hover:border-indigo-500/50 cursor-pointer">
+    <div
+      ref={ref}
+      className="z-10 w-full p-3 rounded-md bg-linear-to-br from-neutral-500/20 to-neutral-500/20 backdrop-blur-lg border-2 border-neutral-100/10 shadow-gray-900/30 shadow-lg transition-all duration-200 hover:-translate-y-0.75 hover:shadow-indigo-500/20 hover:border-indigo-500/50 cursor-pointer"
+    >
       {/* Icon and Progress Number */}
       <div className="flex flex-row justify-between items-center">
         {/* Icon */}
@@ -23,7 +30,7 @@ const Skill = ({ title, progress, Icon }: Props) => {
         </div>
 
         {/* Progress Number */}
-        <h1 className="text-lg font-bold">{progress}%</h1>
+        <h1 className="text-lg font-bold">{count}%</h1>
       </div>
 
       {/* Progress Bar */}
@@ -33,8 +40,8 @@ const Skill = ({ title, progress, Icon }: Props) => {
           <span
             className="absolute inset-0 h-full rounded-md"
             style={{
-              width: `${progress}%`,
-              background: `linear-gradient(90deg, #a1a1a1, ${progress >= 25 && progress < 50 ? "#ff8904" : progress >= 50 && progress < 75 ? "#05df72" : progress >= 75 && progress <= 100 ? "#7c86ff" : "#a1a1a1"})`,
+              width: `${count}%`,
+              background: `linear-gradient(90deg, #a1a1a1, ${count >= 25 && count < 50 ? "#ff8904" : count >= 50 && count < 75 ? "#05df72" : count >= 75 && count <= 100 ? "#7c86ff" : "#a1a1a1"})`,
             }}
           />
         </div>

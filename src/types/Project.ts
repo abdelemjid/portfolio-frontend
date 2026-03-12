@@ -1,6 +1,6 @@
 export interface ProjectType {
   _id: string;
-  title: string;
+  name: string;
   description: string;
   image: string;
   technologies: string;

@@ -63,12 +63,12 @@ export function TimelineItem({ entry, index }: TimelineItemProps) {
           >
             <div
               className={`
-                group relative cursor-pointer rounded-xl border border-white/10
+                group relative cursor-pointer rounded-xl border-2 border-neutral-500/10
                 bg-neutral-500/15 p-6 shadow-lg shadow-black/20
                 backdrop-blur-xl
                 transition-all duration-300
-                hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10
-                hover:border-blue-500/20
+                hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/20
+                hover:border-indigo-500/50
               `}
             >
               {/* Year badge */}
@@ -162,8 +162,8 @@ export function TimelineItem({ entry, index }: TimelineItemProps) {
                 bg-neutral-500/15 p-5 shadow-lg shadow-black/20
                 backdrop-blur-xl
                 transition-all duration-300
-                hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10
-                hover:border-blue-500/20
+                hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/20
+                hover:border-indigo-500/50
               `}
             >
               <span className="mb-2 inline-block rounded-full bg-blue-500/15 px-3 py-1 text-xs font-semibold tracking-wide text-blue-400">
